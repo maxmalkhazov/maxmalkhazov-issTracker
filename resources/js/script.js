@@ -2,14 +2,15 @@ var lat, long;
 
 setInterval(function() {
 	var request = new XMLHttpRequest();
-	request.open("GET", "http://api.open-notify.org/iss-now.json");
+	request.open("GET", "https://api.wheretheiss.at/v1/satellites/25544");
 
 	request.onload = function() {
 		var myData = JSON.parse(request.responseText);
-		lat = myData.iss_position.latitude;
-		long = myData.iss_position.longitude;
+		lat = myData.latitude;
+		long = myData.longitude;
 		initMap(lat, long);
 		geoLocation(lat, long);
+		console.log(myData);
 	}
 
 	request.send();
