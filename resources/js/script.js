@@ -16,6 +16,7 @@ setInterval(function() {
 	request.send();
 
 	function initMap(lat, long) {
+		var image = 'https://image.ibb.co/fzPKby/international_space_station_1.png';
 		var uluru = {lat: parseFloat(lat), lng: parseFloat(long)};
 		var map = new google.maps.Map(document.querySelector('.map__main'), {
 		  zoom: 4,
@@ -23,7 +24,9 @@ setInterval(function() {
 		});
 		var marker = new google.maps.Marker({
 		  position: uluru,
-		  map: map
+		  map: map,
+		  icon: image,
+		  animation: google.maps.Animation.BOUNCE
 		});
 	}
 	
