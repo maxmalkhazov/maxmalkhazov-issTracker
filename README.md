@@ -2,7 +2,7 @@
 
 *User can track the International Space Station in real-time.*
 
-## Build With
+## Built With
 
 JavaScript, CSS3, HTML5.
 
